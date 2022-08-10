@@ -1,1 +1,1 @@
-handle the following flag characters for non-custom conversion specifiers; + space #
+handle the field width for non-custom conversion specifiers
