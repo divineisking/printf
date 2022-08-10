@@ -1,1 +1,1 @@
-Handle the following conversion specifiers; d ; converts input into a base 10 integer i ; converts input into an integer
+handle the following custom conversion specifier; S ; prints the string. non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, followed by the ASCII code value in hexadecimal (upper case - always 2 characters)
