@@ -15,14 +15,14 @@
 
 typedef struct flags
 {
-	int plus;
-	int space;
-	int hash;
+        int plus;
+        int space;
+        int hash;
 } flags_t;
 
 /**
  * struct printHandler - struct to choose the right function depending
- * on the format specifier passed to 
+ * on the format specifier passed to
  * _printf()
  * @c: format specifier
  * @f: pointer t the correct printing function
@@ -30,17 +30,17 @@ typedef struct flags
 
 typedef struct printHandler
 {
-	char c;
-	int (*f)(va_list ap, flags_t *f);
+        char c;
+        int (*f)(va_list ap, flags_t *f);
 } ph;
 
 /* print_nums */
-int print_int(va_list, flags_t *f);
+int print_int(va_list l, flags_t *f);
 void print_number(int n);
 int print_unsigned(va_list l, flags_t *f);
-int count_digit(int l);
+int count_digit(int i);
 
-/* print_base */
+/* print_bases */
 int print_hex(va_list l, flags_t *f);
 int print_hex_big(va_list l, flags_t *f);
 int print_binary(va_list l, flags_t *f);
@@ -67,9 +67,9 @@ int _putchar(char c);
 int _puts(char *str);
 
 /* print_custom */
-int print_rot13(va_list l, flags_t *t);
-int print_rev(va_list l, flags_t *t);
-int print_bigs(va_list l, flags_t *f);
+int print_rot13(va_list l, flags_t *f);
+int print_rev(va_list l, flags_t *f);
+int print_bigS(va_list l, flags_t *f);
 
 /* print_address */
 int print_address(va_list l, flags_t *f);
